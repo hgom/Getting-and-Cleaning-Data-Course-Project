@@ -59,4 +59,4 @@ x_mean_std_data <- rbind(x_test, x_train)
 # 13. group by subject and activity and calculate the average of all other columns
 average_subject_activity <- group_by(x_mean_std_data, subject, activity_label) %>% summarise_all(mean)
 
-write.table(average_subject_activity, file = "./tidy_data.txt")
+write.table(average_subject_activity, file = "./tidy_data.txt", row.names = FALSE)
